@@ -1,33 +1,46 @@
-En este *repl* puedes encontrar varios ejemplos que te pueden ayudar con las tareas de estructura.
+# Sistema de Gestión de Tickets
 
-## Código de Ejemplo (tarea1)
-Para ejecutar el ejemplo tarea1 primero debemos compilar (en la carpeta raíz)
-````
+Programa desarrollado en C para gestionar tickets de soporte técnico según su prioridad y orden de llegada.
+
+## Compilación
+
+Para compilar el programa desde la carpeta raíz:
+```
 gcc tdas/*.c tarea1.c -Wno-unused-result -o tarea1
-````
+```
 
-Y luego ejecutar:
-````
+## Ejecución
+
+Para ejecutar el programa:
+```
 ./tarea1
-````
+```
+
+## Opciones del programa
+
+1. Registrar ticket
+2. Asignar prioridad a ticket
+3. Mostrar tickets pendientes
+4. Procesar siguiente ticket
+5. Buscar ticket por ID
+6. Salir
+
+Todas las opciones se encuentran funcionando correctamente.
+
+## Ejemplo de uso
+
+Al registrar un ticket se ingresa su ID y la descripción del problema. El ticket se registra inicialmente con prioridad Bajo.
+
+Luego se puede cambiar su prioridad a Alto, Medio o Bajo.
+
+Los tickets pendientes se muestran ordenados por prioridad:
+
+Alto > Medio > Bajo
+
+Al procesar un ticket, se selecciona el de mayor prioridad y se elimina de los tickets pendientes.
+
+También se puede buscar un ticket utilizando su ID.
 
 ## TDAs
-En la carpeta `tdas` se encuentran implementados distintos TDAs que puedes utilizar (lista, pila, cola, cola con prioridad y mapas). 
 
-Las implementaciones no son las más eficientes (todas usan como estructura de datos una **lista enlazada**), por lo que puedes reemplazarlas por las que has realizado en los labs.
-
-## Otros códigos (en carpeta examples)
-Para ejecutar los distintos ejemplos que hay en la carpeta `examples`, primero debes compilarlos. Si estamos en la carpeta raíz:
-````
-gcc tdas/*.c examples/example2_menu.c -Wno-unused-result -o example
-````
-Y luego ejecutarlos:
-````
-./example
-````
-
-Se incluyen los siguientes ejemplos:
-* `example1_list`: Uso del TDA Lista, inserción y eliminación de elementos.
-* `example2_menu`: Ejemplo de menú con submenús.
-* `example3_readcsv`: Ejemplo de lectura desde un archivo csv y almacenamiento en datos estructurados.
-* `example4_map`: Ejemplo de uso del TDA mapa.
+En la carpeta `tdas` se encuentran implementados distintos TDAs que se pueden utilizar en el programa.

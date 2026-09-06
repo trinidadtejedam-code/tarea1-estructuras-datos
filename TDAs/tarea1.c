@@ -89,7 +89,7 @@ void mostrarMenuPrincipal() {
 
 void registrar_ticket(List *tickets) {
   printf("Registrar nuevo ticket\n");
-  // Aquí implementarías la lógica para registrar un nuevo ticket
+  // registrar un nuevo ticket
 
   Ticket *nuevo = malloc(sizeof(Ticket));
 
@@ -158,7 +158,7 @@ void asignar_prioridad(List *tickets) {
 }
 
 void mostrar_lista_tickets(List *tickets) {
-  // Mostrar tickets pendientes
+  // mostrar tickets pendientes
 
   Ticket *ticket = list_first(tickets);
 
@@ -235,18 +235,18 @@ int main() {
       registrar_ticket(tickets);
       break;
     case '2':
-      // Lógica para asignar prioridad
+      // lógica para asignar prioridad
       asignar_prioridad(tickets);
       break;
     case '3':
       mostrar_lista_tickets(tickets);
       break;
     case '4':
-      // Lógica para procesar el siguiente ticket
+      // lógica para procesar el siguiente ticket
       procesar_siguiente_ticket(tickets);
       break;
     case '5':
-      // Lógica para buscar ticket por ID
+      // lógica para buscar ticket por ID
       buscar_ticket_por_id(tickets);
       break;
     case '6':
@@ -262,7 +262,7 @@ int main() {
 
   } while (opcion != '6');
 
-  // Liberar recursos
+  // liberar recursos
   liberar_tickets(tickets);
   free(tickets);
 
